@@ -4,13 +4,14 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
-	char alphabets[51] = "abcdefghijklmnopqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char alph[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int i;
+
 	for (i = 0; i < 52; i++)
 	{
-		putchar(alphabets[51]);
+		putchar(alph[i]);
 	}
 	putchar('\n');
 	return (0);
