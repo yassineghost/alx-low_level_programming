@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * int _islower(int c) - prints 1 if the input is lowercase
  * and prints 0 if not
