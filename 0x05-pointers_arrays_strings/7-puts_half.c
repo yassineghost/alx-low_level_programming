@@ -10,6 +10,7 @@ void puts_half(char *str)
 {
 	int c = 0;
 	int b;
+
 	while (str[c] != '\0')
 	{
 		c++;
@@ -22,7 +23,7 @@ void puts_half(char *str)
 	{
 		b = (c - 1) / 2;
 	}
-	while ( str[b] != '\0')
+	while (str[b] != '\0')
 	{
 		_putchar (str[b]);
 		b++;
