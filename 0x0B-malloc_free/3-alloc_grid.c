@@ -11,28 +11,26 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **tik, c, j;
-	tik = malloc(sizeof(*tik) * height);
+	int c, j;
+	int **tik;
 
-	if (width <= 0 || height <= 0 || tik == 0)
-	{
+	if (width <= 0 || height <= 0)
 		return (NULL);
-	}
-	else
+	tik = malloc(height * sizeof(int *));
+	if (!tik)
+		return (NULL);
+	for (c = 0; c < height; c++)
 	{
-		for (c = 0; c < height; c++)
+		tik[c] = malloc(width * sizeof(int));
+		if (!tik[c])
 		{
-			tik[c] = malloc(sizeof(**tik) * width);
-			if (tik[c] == 0)
-			{
-				while (c--)
-					free(tik[c]);
-				free(tik);
-				return (NULL);
-			}
-			for (j = 0; j < width; j++);
-				tik[c][j] = 0;
+			while (c-- >= 0)
+				free(tik[c]);
+			free(tik);
+			return (NULL);
 		}
+		for (j = 0; j < width; j++)
+			tik[c][j] = 0;
 	}
 	return (tik);
 }
