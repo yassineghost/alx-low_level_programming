@@ -3,7 +3,7 @@
 /**
  * free_dog - free the dog
  *
- * @d: the d 
+ * @d: the d
  *
  * Return: nothing
  */
