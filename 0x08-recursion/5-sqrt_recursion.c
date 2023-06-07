@@ -3,7 +3,7 @@
 int _checker(int x, int y);
 
 /**
- * int _sqrt_recursion - returns the natural square root of a number
+ * _sqrt_recursion - returns the natural square root of a number
  *
  * @n: the number to be chacked
  *
@@ -16,6 +16,14 @@ int _sqrt_recursion(int n)
 	return (_checker(1, n));
 }
 
+/**
+ * _checker - checkes for the natural square root
+ *
+ * @x: integer
+ * @y: integer
+ *
+ * Return: int
+ */
 int _checker(int x, int y)
 {
 	if (x * x == y)
