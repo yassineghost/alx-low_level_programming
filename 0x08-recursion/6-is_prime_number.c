@@ -31,5 +31,5 @@ int _prime(int x, int y)
 	else if (x > y / 2)
 		return (1);
 	else
-		return (_prome(x + 1, y));
+		return (_prime(x + 1, y));
 }
