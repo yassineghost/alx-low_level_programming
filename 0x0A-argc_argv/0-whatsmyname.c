@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - a program prints it's name
+ * main - prints the program's name
  *
- * @argc: argument's count
- * @agv: argement's vector
+ * @argc: argument count
+ * @argv: array of arguments
  *
- * Return: 0 Seccess
+ * Return: Always 0 (Success)
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
