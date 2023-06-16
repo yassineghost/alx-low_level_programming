@@ -1,44 +1,46 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
- * _memset - fill a block of memory with a specific value
- * @s: starting address of memory to be filled
- * @b: the desired value
- * @n: number of bytes to be changed
- *
- * Return: changed array with new value for n bytes
+ * _memset - prints buffer in hexa
+ * @s: buffer
+ * @b: write
+ * @n: size
+ * Return: Nothing.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i = 0;
+	unsigned int i;
 
-	for (; n > 0; i++)
+	for (i = 0; i < n; i++)
 	{
-		s[i] = b;
-		n--;
+		*(s + i) = b;
 	}
 	return (s);
 }
-
-
 /**
- * *_calloc - allocates memory for an array
- * @nmemb: number of elements in the array
- * @size: size of each element
+ * _calloc - function that concatenates two strings.
+ * @nmemb: string s1.
+ * @size: string s2.
  *
- * Return: pointer to allocated memory
+ * Return: Always 0.
  */
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	void *str;
 
 	if (nmemb == 0 || size == 0)
+	{
 		return (NULL);
+	}
 
-	p = malloc(size * nmemb);
-	if (p == NULL)
+	str = malloc(nmemb * size);
+	if (str == NULL)
+	{
 		return (NULL);
+	}
+	_memset(str, 0, nmemb * size);
 
-	_memset(p, 0, nmemb * size);
-	return (p);
+	return (str);
 }
